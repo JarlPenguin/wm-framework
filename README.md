@@ -8,35 +8,27 @@ Paste this as your welcome message:
 
 </script>
 
-<script src="https://wingysam.github.io/wm-framework/bundle.js"></script>
+<script src="https://jarlpenguin.github.io/wm-framework/bundle.js"></script>
 ```
 
 ## Configuration
 ### Notes
-Lower down is higher priority:
+Statements further to the right take higher priority:
 ```
-key val
-key value
+key val|key value
 ```
 `key` would be `value`, **not** `val`.
 
 ### Key/Value
 ```
-key1 value1
-key2 value2
+key1 value1|key2 value2
 ```
 
 ### List
 ```
-@List Name
-List Item 1
-List Item 2
-
-@List Name 2
-List Item 1
-List Item 2
+@List Name|List Item 1|List Item 2||@List Name 2|List Item 1|List Item 2||...
 ```
-End the list with a blank line
+Separate list items with a single pipe (`|`). To close a list — whether you are starting a new list or returning to normal settings — you **must** use a double pipe (`||`).
 
 ## Custom HTML
 Add a `div` with ID `custom-top` or `custom-bottom`.

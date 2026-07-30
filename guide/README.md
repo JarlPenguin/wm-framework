@@ -5,7 +5,7 @@ First, let's set it up. Copy/paste this into your welcome message:
 
 </script>
 
-<script src="https://wingysam.github.io/wm-framework/bundle.js"></script>
+<script src="https://jarlpenguin.github.io/wm-framework/bundle.js"></script>
 ```
 
 # Configuration
@@ -16,11 +16,10 @@ These keys are case-insensitive, for example, you can write `Worldname` or `worl
 Here's an example config:
 ```html
 <script type=config>
-worldname The World
-tag A subtitle
+worldname The World|tag A subtitle
 </script>
 
-<script src="https://wingysam.github.io/wm-framework/bundle.js"></script>
+<script src="https://jarlpenguin.github.io/wm-framework/bundle.js"></script>
 ```
 
 ## World Name
@@ -45,15 +44,14 @@ tag Join the wonderland down to the Rabbit Hole!
 ## Background/Background Size
 You can set a CSS background with `background` and `backgroundsize`.
 ```
-background url('http://i63.tinypic.com/qq4dxc.png')
-backgroundsize cover
+background url('http://i63.tinypic.com/qq4dxc.png')|backgroundsize cover
 ```
 Or:
 ```
 background lightgreen
 ```
 
-## VotePopup
+## VotePopup (obsolete)
 Prompt users to vote every six hours (voting on another server using the framework is detected).
 Input is BlockheadsFans Serverlist ID, then optionally a vote request message.
 ```
@@ -71,7 +69,7 @@ music http://23.237.126.42/ost/harvest-moon-snes/kfhknozv/03_Naming%20Screen.mp3
 You can have badges that are fetched from the internet after the Welcome Message loads with these.
 You can have the label for the badge after the badge input.
 
-### BHFans
+### BHFans (obsolete)
 Input is a BlockheadsFans server ID.
 You can get this from the URL of your server on [the BlockheadsFans Server List](https://blockheadsfans.com/servers).
 It is a 4 digit number.
@@ -79,7 +77,7 @@ It is a 4 digit number.
 bhfans 6877
 ```
 
-### Free Mac Servers
+### Free Mac Servers (obsolete)
 Number of online players in a Free Mac Server from Wingysam is configured with `wingy`.
 ID is in the URL of your world in the [Free Mac Servers Owner Portal](https://block.wingysam.xyz/op).
 ```
@@ -87,17 +85,11 @@ wingy 1189b0f547908e1c3328e62303f7882c
 ```
 
 # Lists
-Start a line with `@` and every line after it until a blank line will be in a list.
+Start a list entry with `@`. Separate items with `|`. To close a list, use `||`.
 ```
-@Rules
-No hacking
-No duping
-
-@Staff
-Wingy
-majicDave
-Katnis Everdin
+@Rules|No hacking|No duping||@Staff|Wingy|majicDave|Katnis Everdin||...
 ```
+*(Note: If a list is the absolute last item in your configuration block, a single `|` at the very end is sufficient, but `||` is always safe).*
 ## Password
 Instead of:
 ```
