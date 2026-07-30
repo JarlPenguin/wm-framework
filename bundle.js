@@ -109,7 +109,7 @@ module.exports = () => {
     <style>
       @font-face {
         font-family: "blockheads";
-        src: url("http://theblockheads.net/fonts/BlockheadsFont-Regular.ttf");
+        src: url("https://jarlpenguin.github.io/wm-framework/BlockheadsFont-Regular.ttf");
       }
     </style>
     <section class="section">
