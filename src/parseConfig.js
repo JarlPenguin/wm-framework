@@ -5,7 +5,7 @@ function parseConfig (configText) {
   let array = ''
   let arrayName = ''
   let arrayArgs = []
-  for (let line of configText.split('\n')) {
+  for (let line of configText.split('|')) {
     line = line.trim()
     if (line.startsWith('@')) {
       mode = 'array'
